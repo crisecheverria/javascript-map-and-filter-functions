@@ -44,7 +44,7 @@ We can write less code if we use map:
 ```javascript
 function frameworkCreator(frameworks) {
   // New function updated using map
-  // Map let us loop trough the array a create a new one
+  // Map let us loop trough the array an create a new one
   return frameworks.map(function(framework){
     return framework.creator;
   })
