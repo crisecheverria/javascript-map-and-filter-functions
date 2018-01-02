@@ -59,3 +59,35 @@ var creator =  frameworkCreator([
 
 console.log(JSON.stringify(creator));
 ```
+
+## Use Array Filter Method
+Now, in case we need to filter an array based on a condition, we can use the Array Filter Method, take the next array as a example
+```javascript
+var ages = [45, 23, 12, 15, 34];
+```
+We want to filter the array in order to only take the ages that are greater and iqual than 18, for this we could use the next code:
+```javascript
+function getGreater(ages) {
+  const adults = [];
+  for (let i = 0; i < ages.length; i++) {
+    if (ages[i] >= 18)
+    adults.push(ages[i]);
+  }
+  return adults;
+}
+
+var ages = [45, 23, 12, 15, 34];
+console.log(JSON.stringify(getGreater(ages)));
+ ```
+ If we use the Array Filter Method, we write less code:
+ ```javascript
+ function getGreater(ages) {
+  return ages.filter(function(element){
+    return element >= 18;
+  })
+}
+
+var adults =  getGreater([45, 23, 12, 15, 34]);
+
+console.log(JSON.stringify(adults));
+ ```
